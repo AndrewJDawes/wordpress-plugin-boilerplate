@@ -17,4 +17,4 @@
 
 defined('ABSPATH') || exit;
 
-require_once(ABSPATH . 'wp-content/mu-plugins/fx-things/class-fx-things.php');
+require_once(__DIR__ . '/fx-things/class-fx-things.php');
