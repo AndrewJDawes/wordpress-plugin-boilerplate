@@ -1,20 +1,5 @@
 <?php
 
-/**
- * 
- * Plugin Name: FX Things
- * 
- * Version:     0.0.21
- * Description: Adds support and functionality for Things post type
- * 
- * Author:      The WebFX Team
- * Author URI:  https://webfx.com
- * Plugin URI:  https://webfx.com
- * 
- * Text Domain: fx
- * 
- */
-
 defined('ABSPATH') || exit;
 
 if (!class_exists('FX_Things')) {
