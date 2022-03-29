@@ -1,6 +1,6 @@
 <?php
 
-namespace FX_Searches\Abstracts;
+namespace FX_Things\Abstracts;
 
 defined('ABSPATH') || exit;
 

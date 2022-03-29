@@ -1,7 +1,7 @@
 <?php
 
 
-namespace FX_Searches\Abstracts;
+namespace FX_Things\Abstracts;
 
 use WP_Post;
 use Exception;
@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 
 /**
  * Abstract Model
- * @package 	FX_Searches
+ * @package 	FX_Things
  * @category 	Abstracts
  * @author 		WebFX
  */

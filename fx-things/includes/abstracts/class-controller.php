@@ -1,8 +1,8 @@
 <?php
 
-namespace FX_Searches\Abstracts;
+namespace FX_Things\Abstracts;
 
-use FX_Searches;
+use FX_Things;
 use WP_Query;
 use stdClass;
 
