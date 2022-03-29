@@ -1,23 +1,17 @@
 <?php
 
-namespace FX_Things\Abstracts;
+namespace FX_Searches\Abstracts;
 
 defined('ABSPATH') || exit;
 
-abstract class Shortcode
+require_once __DIR__ . '/class-singleton.php';
+
+abstract class Shortcode extends Singleton
 {
-    private static $instance;
     public static $tag = '';
-    private function __construct()
+    protected function __construct()
     {
         $this->register_shortcode();
-    }
-    public static function get_instance()
-    {
-        if (!(static::$instance instanceof static)) {
-            static::$instance = new static();
-        }
-        return static::$instance;
     }
     /**
      * @return string

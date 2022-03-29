@@ -16,6 +16,7 @@ if (!class_exists('FX_Things')) {
         {
             self::require();
             self::instantiate();
+            $this->add_wp_hooks();
         }
         public static function get_instance()
         {
@@ -57,6 +58,15 @@ if (!class_exists('FX_Things')) {
             foreach ($scanned_dir as $file) {
                 require_once $dir . $file;
             }
+        }
+        private function add_wp_hooks()
+        {
+            add_action('wp_enqueue_scripts', [$this, 'register_assets']);
+        }
+        public function register_assets()
+        {
+            wp_register_style('fx-things-main', self::get_plugin_url() . 'assets/css/main.css', array(), self::$version);
+            wp_enqueue_style('fx-things-main', self::get_plugin_url() . 'assets/css/main.css', array(), self::$version);
         }
         public static function get_template($name, $args = array())
         {

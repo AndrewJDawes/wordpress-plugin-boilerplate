@@ -1,16 +1,17 @@
 <?php
 
-namespace FX_Things\Abstracts;
+namespace FX_Searches\Abstracts;
 
-use FX_Things;
+use FX_Searches;
 use WP_Query;
 use stdClass;
 
 defined('ABSPATH') || exit;
 
-abstract class Controller
+require_once __DIR__ . '/class-singleton.php';
+
+abstract class Controller extends Singleton
 {
-    private static $instance;
     public static $model = '';
     protected function __construct()
     {
@@ -21,13 +22,7 @@ abstract class Controller
         add_action('init', [static::class, 'register_post_type']);
         add_action('acf/init', [static::class, 'register_acf_fields']);
     }
-    public static function get_instance()
-    {
-        if (!(static::$instance instanceof static)) {
-            static::$instance = new static();
-        }
-        return static::$instance;
-    }
+
     abstract public static function register_post_type();
     abstract public static function register_acf_fields();
 
