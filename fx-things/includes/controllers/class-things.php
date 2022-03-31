@@ -4,6 +4,7 @@ namespace FX_Things\Controllers;
 
 use DateInterval;
 use FX_Things\Abstracts\Controller;
+use FX_Things\Traits\SingletonTrait;
 use FX_Things\Models\Thing;
 use FX_Things\Helpers\Dates;
 use DateTime;
@@ -14,6 +15,7 @@ defined('ABSPATH') || exit;
 
 class Things extends Controller
 {
+    use SingletonTrait;
     public static $model = Thing::class;
     protected function __construct()
     {

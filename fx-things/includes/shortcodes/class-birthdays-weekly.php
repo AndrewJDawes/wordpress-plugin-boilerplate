@@ -4,6 +4,7 @@ namespace FX_Things\Shortcodes;
 
 use FX_Things;
 use FX_Things\Abstracts\Shortcode;
+use FX_Things\Traits\SingletonTrait;
 use FX_Things\Controllers\Things;
 use FX_Things\Models\Thing;
 use FX_Things\Helpers\Dates;
@@ -14,6 +15,7 @@ defined('ABSPATH') || exit;
 
 class Birthdays_Weekly extends Shortcode
 {
+    use SingletonTrait;
     public static $tag = 'fxc_birthdays_weekly';
     public function callback($atts, $content, $name)
     {

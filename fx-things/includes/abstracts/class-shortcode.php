@@ -4,9 +4,7 @@ namespace FX_Things\Abstracts;
 
 defined('ABSPATH') || exit;
 
-require_once __DIR__ . '/class-singleton.php';
-
-abstract class Shortcode extends Singleton
+abstract class Shortcode
 {
     public static $tag = '';
     protected function __construct()

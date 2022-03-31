@@ -3,6 +3,7 @@
 namespace FX_Things\Helpers;
 
 use FX_Things;
+use FX_Things\Traits\SingletonTrait;
 use DateTime;
 use DateInterval;
 use DatePeriod;
@@ -11,17 +12,7 @@ defined('ABSPATH') || exit;
 
 class Dates
 {
-    private static $instance;
-    private function __construct()
-    {
-    }
-    public static function get_instance()
-    {
-        if (!(self::$instance instanceof self)) {
-            self::$instance = new self();
-        }
-        return self::$instance;
-    }
+    use SingletonTrait;
     public static function get_weekdays()
     {
         return [

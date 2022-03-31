@@ -2,15 +2,12 @@
 
 namespace FX_Things\Abstracts;
 
-use FX_Things;
 use WP_Query;
 use stdClass;
 
 defined('ABSPATH') || exit;
 
-require_once __DIR__ . '/class-singleton.php';
-
-abstract class Controller extends Singleton
+abstract class Controller
 {
     public static $model = '';
     protected function __construct()

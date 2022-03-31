@@ -41,6 +41,7 @@ if (!class_exists('FX_Things')) {
         }
         private static function require()
         {
+            self::require_files_in_dir(self::get_plugin_path() . 'includes/traits/');
             self::require_files_in_dir(self::get_plugin_path() . 'includes/abstracts/');
             self::require_files_in_dir(self::get_plugin_path() . 'includes/models/');
             self::require_files_in_dir(self::get_plugin_path() . 'includes/controllers/');
