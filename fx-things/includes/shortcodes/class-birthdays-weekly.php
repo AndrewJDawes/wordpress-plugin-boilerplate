@@ -17,6 +17,11 @@ class Birthdays_Weekly extends Shortcode
 {
     use SingletonTrait;
     public static $tag = 'fxc_birthdays_weekly';
+    protected function __construct()
+    {
+        // Necessary, because empty trait method overrides inherited parent method unless this is added.
+        parent::__construct();
+    }
     public function callback($atts, $content, $name)
     {
 
