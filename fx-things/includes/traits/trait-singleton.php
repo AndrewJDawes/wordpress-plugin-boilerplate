@@ -11,6 +11,6 @@ trait SingletonTrait {
     }
     protected function __construct() { }
     protected function __clone() { }
-    protected function __sleep() { }
-    protected function __wakeup() { }
+    //     protected function __sleep() { }
+    //     protected function __wakeup() { }
 }
