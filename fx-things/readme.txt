@@ -1,12 +1,14 @@
-=== Your Plugin Name ===
- 
-Contributors: Your WordPress.org Username
-Tags: wpbeginner, plugin tutorial
-Requires at least: 5.5
-Tested up to: 5.8
+=== My Plugin Name ===
+Contributors: (this should be a list of wordpress.org userid's)
+Tags: logger, logging, debug
+Requires at least: 4.7
+Tested up to: 5.9
 Stable tag: 1.0
+Requires PHP: 7.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ 
+Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
   
 A WordPress plugin to teach beginners how to write a WordPress plugin. 
   
